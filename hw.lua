@@ -120,13 +120,10 @@ function Board:new(size)
 
     -- Tick
     function board:Tick()
-        io.write('**************************************\n')
         io.write('**************GAME*TICK***************\n')
-        io.write('**************************************\n')
 
         local score = 0
         local matches = board:FindMatches()
-        var_dump(' M ===> '..matches)
         while matches ~= 0 do
             score = score + board:RemoveMatches()
             board:Dump()
